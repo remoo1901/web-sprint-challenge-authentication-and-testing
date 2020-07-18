@@ -30,9 +30,10 @@
     "jest": "^26.1.0",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.0",
-    "sqlite3": "^4.1.1"
+    "sqlite3": "^4.2.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "nodemon": "^2.0.4"
   }
 }

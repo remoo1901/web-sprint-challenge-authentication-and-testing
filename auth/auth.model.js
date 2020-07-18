@@ -1,26 +1,25 @@
 const db = require("../database/dbConfig")
-const { decodeBase64 } = require("bcryptjs")
 
 
 async function add(user){
-    const [id] = await db("auth").insert(user)
+    const [id] = await db("users").insert(user)
     return findById(id)
 }
 
 function find(){
-    return db("auth").select("id", "username")
+    return db("users").select("id", "username")
 }
 
 function findBy(filter){
-    return db("auth")
+    return db("users")
            .select("id", "username", "password")
            .where(filter)
 }
 
-function findById(){
-    return db("auth")
+function findById(id){
+    return db("users")
             .select("id", "username")
-            .where({id})
+           .where({id})
             .first()
 }
 

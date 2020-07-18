@@ -5,8 +5,13 @@ module.exports = {
     useNullAsDefault: true,
     migrations: {
       directory: './database/migrations',
-      tableName: 'dbmigrations',
+      //tableName: 'dbmigrations',
     },
     seeds: { directory: './database/seeds' },
   },
+  pool: {
+		afterCreate: (conn, done) => {
+			conn.run("PRAGMA foreign_keys = ON", done)
+		},
+	},
 };
