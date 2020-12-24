@@ -26,11 +26,32 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+One difference is that cookies are for sending and storing arbitrary data, whereas bearer tokens are specifically for sending authorization data
+
+==========================================
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+Using a Key Factor, BCrypt is able to adjust the cost of hashing. With Key Factor changes, the hash output can be influenced. In this way, BCrypt remains extremely resistant to hacks, especially a type of password cracking called rainbow table.
+
+===========================================
 
 3. How are unit tests different from integration and end-to-end testing.
 
+Unlike end-to-end tests that rely on external components, unit tests are not flaky. ... They have one major advantage over unit tests: they ensure that modules which work well in isolation, also play well together. Integration tests typically focus on a small number of modules and test their interactions
+
+===========================================
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+
+Write a Test. Since development is driven by tests, the obvious first step is to create a new test. ...
+Confirm the Test Fails. Once the test is created, the next step is to confirm that the test fails. ...
+Write Code to Pass Test. ...
+Confirm the Test Passes. ...
+Refactor. ...
+Repeat All Steps.
+
+============================================
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
